@@ -36,10 +36,11 @@ Rezervační Systém je webová aplikace, která poskytuje následující funkce
 
 ## Struktura projektu
 
-- **index.php**: Hlavní stránka s formulářem pro rezervace, zpracováním formuláře a odesíláním potvrzovacích e-mailů.
-- **conn.php**: Soubor pro připojení k MySQL databázi a pomocné funkce pro práci s databází.
-- **css/style.css**: Stylování stránky.
-- **PHPMailer-master/**: Knihovna PHPMailer pro odesílání e-mailů.
+- `index.php`: Hlavní stránka s formulářem pro rezervace, zpracováním formuláře a odesíláním potvrzovacích e-mailů.
+- `conn.php`: Připojení k MySQL databázi.
+- `css/style.css`: Stylování stránky.
+- `images/`: Obrázky používané na webu.
+- `PHPMailer-master`: Knihovna PHPMailer pro odesílání e-mailů.
 
 ## API
 

@@ -1,0 +1,102 @@
+/* Globální proměnné */
+:root {
+  --font-family: "Arial", sans-serif;
+  --background-color: #f4f4f4;
+  --form-background-color: #fff;
+  --form-padding: 20px;
+  --form-border-radius: 8px;
+  --form-box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  --form-width: 300px;
+  --form-margin-bottom: 20px;
+  --form-margin-top: 20px;
+  --label-margin-bottom: 8px;
+  --label-font-weight: bold;
+  --input-width-calc: calc(100% - 16px);
+  --input-padding: 8px;
+  --input-margin-bottom: 12px;
+  --input-border: 1px solid #ccc;
+  --input-border-radius: 4px;
+  --input-font-size: 14px;
+  --submit-background-color: #4caf50;
+  --submit-color: #fff;
+  --submit-hover-background-color: #45a049;
+  --update-message-margin-top: 10px;
+  --update-message-margin-bottom: 20px;
+  --form-responsive-width: 90%;
+  --footer-margin-top: auto;
+}
+
+/* Stylování pro tělo stránky */
+body {
+  font-family: var(--font-family);
+  background-color: var(--background-color);
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+/* Stylování pro formulář */
+form {
+  background-color: var(--form-background-color);
+  padding: var(--form-padding);
+  border-radius: var(--form-border-radius);
+  box-shadow: var(--form-box-shadow);
+  width: var(--form-width);
+  text-align: left;
+  margin-bottom: var(--form-margin-bottom);
+  max-width: 100%;
+  box-sizing: border-box;
+  margin-top: var(--form-margin-top); /* Odsazení shora */
+}
+
+/* Stylování pro popisky */
+label {
+  display: block;
+  margin-bottom: var(--label-margin-bottom);
+  font-weight: var(--label-font-weight);
+}
+
+/* Stylování pro vstupní pole */
+input {
+  width: var(--input-width-calc);
+  padding: var(--input-padding);
+  margin-bottom: var(--input-margin-bottom);
+  box-sizing: border-box;
+  border: var(--input-border);
+  border-radius: var(--input-border-radius);
+  font-size: var(--input-font-size);
+}
+
+/* Stylování pro tlačítka odeslání */
+input[type="submit"] {
+  background-color: var(--submit-background-color);
+  color: var(--submit-color);
+  cursor: pointer;
+}
+
+/* Efekt při najetí myši na tlačítko */
+input[type="submit"]:hover {
+  background-color: var(--submit-hover-background-color);
+}
+
+/* Stylování pro zprávu o aktualizaci */
+.update-message {
+  margin-top: var(--update-message-margin-top);
+  margin-bottom: var(--update-message-margin-bottom);
+}
+
+/* Responsivní stylování pro formulář */
+@media (max-width: 400px) {
+  form {
+    width: var(--form-responsive-width);
+  }
+}
+
+/* Stylování pro zápatí */
+footer {
+  margin-top: var(--footer-margin-top);
+}

@@ -1,54 +1,58 @@
-# Rezervační Systém
+# Reservation System
 
-Vítejte v repozitáři Rezervačního Systému! Tento projekt je webová aplikace pro efektivní správu rezervací. Umožňuje uživatelům snadno vytvářet, aktualizovat a potvrzovat rezervace, přičemž automaticky odesílá potvrzovací e-maily.
+Welcome to the Reservation System repository! This project is a web application designed for efficient reservation management. It allows users to easily create, update, and confirm reservations, while automatically sending confirmation emails.
 
-## Obsah
-- [Popis](#popis)
-- [Použité technologie](#použité-technologie)
-- [Struktura projektu](#struktura-projektu)
+## Contents
+
+- [Description](#description)
+- [Technologies Used](#technologies-used)
+- [Project Structure](#project-structure)
 - [API](#api)
-- [Knihovna PHPMailer](#knihovna-phpmailer)
+- [PHPMailer Library](#phpmailer-library)
 
-## Popis
+## Description
 
-Rezervační Systém je webová aplikace, která poskytuje následující funkce:
+The Reservation System is a web application that provides the following features:
 
-- **Formulář pro rezervace**: Uživatelé mohou zadat informace o rezervaci (jméno, telefonní číslo, e-mail, počet osob, datum a čas).
-- **Vytváření rezervace**: Nové rezervace jsou automaticky ukládány do databáze.
-- **Aktualizace rezervace**: Uživatelé mohou aktualizovat existující rezervace na základě telefonního čísla a data.
-- **Potvrzení rezervace**: Po úspěšném vytvoření nebo aktualizaci rezervace je automaticky odeslán potvrzovací e-mail.
-- **Živý chat**: Komunikace s uživateli v reálném čase prostřednictvím API Tawk.to.
+- **Reservation Form:** Users can enter reservation details (name, phone number, email, number of people, date, and time).
+- **Create Reservation:** New reservations are automatically saved to the database.
+- **Update Reservation:** Users can update existing reservations based on phone number and date.
+- **Reservation Confirmation:** After a reservation is successfully created or updated, a confirmation email is automatically sent.
+- **Live Chat:** Real-time communication with users through the Tawk.to API.
 
-## Použité technologie
+## Technologies Used
 
 ### Frontend
-- **HTML5**: Struktura webové stránky.
-- **CSS3**: Stylování webové stránky.
+
+- **HTML5:** Structure of the website.
+- **CSS3:** Styling of the website.
 
 ### Backend
-- **PHP**: Zpracování dat a interakce s databází.
-- **MySQL**: Databáze pro ukládání informací o rezervacích.
-- **PHPMailer**: Knihovna pro odesílání e-mailů z PHP aplikací.
 
-### Vývojové nástroje
-- **XAMPP**: Lokální webový server obsahující Apache, MySQL a PHP.
-- **Apache Server**: Webový server pro provoz PHP aplikací.
+- **PHP:** Data processing and interaction with the database.
+- **MySQL:** Database for storing reservation information.
+- **PHPMailer:** Library for sending emails from PHP applications.
 
-## Struktura projektu
+### Development Tools
 
-- `index.php`: Hlavní stránka s formulářem pro rezervace, zpracováním formuláře a odesíláním potvrzovacích e-mailů.
-- `conn.php`: Připojení k MySQL databázi.
-- `css/style.css`: Stylování stránky.
-- `PHPMailer-master`: Knihovna PHPMailer pro odesílání e-mailů.
+- **XAMPP:** Local web server containing Apache, MySQL, and PHP.
+- **Apache Server:** Web server for running PHP applications.
+
+## Project Structure
+
+- `index.php`: Main page with reservation form, form processing, and sending confirmation emails.
+- `conn.php`: Connection to the MySQL database.
+- `css/style.css`: Styling of the page.
+- `PHPMailer-master`: PHPMailer library for sending emails.
 
 ## API
 
-Projekt obsahuje následující API:
+The project includes the following API:
 
-- **Tawk.to chat**: API pro integraci živého chatu Tawk.to, který umožňuje komunikaci s uživateli v reálném čase.
+- **Tawk.to chat:** API for integrating Tawk.to live chat, enabling real-time communication with users.
 
-## Knihovna PHPMailer
+## PHPMailer Library
 
-PHPMailer je použita k odesílání potvrzovacích e-mailů v tomto projektu. Konkrétně slouží k:
+PHPMailer is used for sending confirmation emails in this project. Specifically, it serves to:
 
-- **Odesílání e-mailů s potvrzením rezervace**: Po úspěšném vytvoření nebo aktualizaci rezervace je automaticky odeslán e-mail s podrobnostmi o rezervaci. Tímto způsobem PHPMailer zajišťuje, že uživatelé dostanou okamžité potvrzení a jsou informováni o všech důležitých detailech.
+- **Send Reservation Confirmation Emails:** After a reservation is successfully created or updated, an email with reservation details is automatically sent. PHPMailer ensures that users receive immediate confirmation and are informed of all important details.

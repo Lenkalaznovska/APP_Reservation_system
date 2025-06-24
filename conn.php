@@ -1,8 +1,8 @@
 <?php
-$servername = "sql5.webzdarma.cz";
-$username = "rezervacnisy1460";
-$password = "UQ4aJ6bnv3owCHaJnO-e";
-$dbname = "rezervacnisy1460";
+$servername = "";
+$username = "";
+$password = "";
+$dbname = "";
 
 $conn = mysqli_connect($servername, $username, $password, $dbname);
 $conn->set_charset("utf8");

@@ -1,60 +1,52 @@
-# Reservation System
+# 📅 Reservation System
 
-Welcome to the Reservation System repository! This project is a web application designed for efficient reservation management. It allows users to easily create, update, and confirm reservations, while automatically sending confirmation emails. You can view the live version of the site [here](http://rezervacni-system.wz.cz:8080).
+A simple and effective web application for managing reservations. The system features a straightforward form for creating and updating reservations, with automated email confirmations sent to clients using the PHPMailer library.
 
-<img width="516" height="813" alt="image" src="https://github.com/user-attachments/assets/b6c772ed-00c9-4ce7-b1b7-541bf53f9682" />
+The live version is available here: [rezervacni-system.wz.cz](http://rezervacni-system.wz.cz:8080)
 
-## Contents
+<img width="516" height="813" alt="Reservation form on a mobile device" src="https://github.com/user-attachments/assets/b6c772ed-00c9-4ce7-b1b7-541bf53f9682" />
 
-- [Description](#description)
-- [Technologies Used](#technologies-used)
-- [Project Structure](#project-structure)
-- [API](#api)
-- [PHPMailer Library](#phpmailer-library)
+---
 
-## Description
+## ✨ Key Features
 
-The Reservation System is a web application that provides the following features:
+-   **Create & Update Reservations:** A simple interface for users to submit new reservations or update existing ones.
+-   **Automated Email Confirmations:** Utilizes PHPMailer to instantly send detailed confirmation emails to clients upon successful submission.
+-   **Input Validation:** Includes backend validation to ensure data integrity, such as a required pattern for phone numbers.
+-   **Secure Database Operations:** Uses `mysqli` with prepared statements to prevent SQL injection vulnerabilities.
+-   **Third-Party Chat Integration:** Integrated with Tawk.to for live user support.
+-   **Responsive Design:** A clean and simple layout that works on both desktop and mobile devices.
 
-- **Reservation Form:** Users can enter reservation details (name, phone number, email, number of people, date, and time).
-- **Create Reservation:** New reservations are automatically saved to the database.
-- **Update Reservation:** Users can update existing reservations based on phone number and date.
-- **Reservation Confirmation:** After a reservation is successfully created or updated, a confirmation email is automatically sent.
-- **Live Chat:** Real-time communication with users through the Tawk.to API.
+---
 
-## Technologies Used
+## 🛠️ Technology Stack
 
-### Frontend
+This project uses a classic web stack without any complex frameworks, making it lightweight and easy to understand.
 
-- **HTML5:** Structure of the website.
-- **CSS3:** Styling of the website.
+-   **Frontend:**
+    -   **HTML5**
+    -   **Vanilla CSS3**
+-   **Backend:**
+    -   **PHP** (utilizing the procedural `mysqli` extension for database communication)
+    -   **MySQL / MariaDB**
+-   **Dependencies:**
+    -   **PHPMailer:** A popular PHP library for sending emails, included manually in the project.
 
-### Backend
+---
 
-- **PHP:** Data processing and interaction with the database.
-- **MySQL:** Database for storing reservation information.
-- **PHPMailer:** Library for sending emails from PHP applications.
+## 🗃️ Database Schema
 
-### Development Tools
+To understand the application's data structure, here is the SQL command to create the necessary `reservations` table.
 
-- **XAMPP:** Local web server containing Apache, MySQL, and PHP.
-- **Apache Server:** Web server for running PHP applications.
-
-## Project Structure
-
-- `index.php`: Main page with reservation form, form processing, and sending confirmation emails.
-- `conn.php`: Connection to the MySQL database.
-- `css/style.css`: Styling of the page.
-- `PHPMailer-master`: PHPMailer library for sending emails.
-
-## API
-
-The project includes the following API:
-
-- **Tawk.to chat:** API for integrating Tawk.to live chat, enabling real-time communication with users.
-
-## PHPMailer Library
-
-PHPMailer is used for sending confirmation emails in this project. Specifically, it serves to:
-
-- **Send Reservation Confirmation Emails:** After a reservation is successfully created or updated, an email with reservation details is automatically sent. PHPMailer ensures that users receive immediate confirmation and are informed of all important details.
+```sql
+CREATE TABLE `reservations` (
+  `id` INT AUTO_INCREMENT PRIMARY KEY,
+  `Name` VARCHAR(255) NOT NULL,
+  `Phone` VARCHAR(20) NOT NULL,
+  `Email` VARCHAR(255) NOT NULL,
+  `NumberOfPersons` INT NOT NULL,
+  `ReservationDate` DATE NOT NULL,
+  `ReservationTime` TIME NOT NULL,
+  `created_at` TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+  UNIQUE KEY `unique_reservation` (`Phone`, `ReservationDate`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;

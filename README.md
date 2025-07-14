@@ -36,17 +36,20 @@ This project uses a classic web stack without any complex frameworks, making it 
 
 ## 🗃️ Database Schema
 
-To understand the application's data structure, here is the SQL command to create the necessary `reservations` table.
+Here is the SQL command to create the necessary `reservations` table.
 
-```sql
-CREATE TABLE `reservations` (
-  `id` INT AUTO_INCREMENT PRIMARY KEY,
-  `Name` VARCHAR(255) NOT NULL,
-  `Phone` VARCHAR(20) NOT NULL,
-  `Email` VARCHAR(255) NOT NULL,
-  `NumberOfPersons` INT NOT NULL,
-  `ReservationDate` DATE NOT NULL,
-  `ReservationTime` TIME NOT NULL,
-  `created_at` TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-  UNIQUE KEY `unique_reservation` (`Phone`, `ReservationDate`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+<details>
+  <summary>Click to view SQL Schema</summary>
+  
+  ```sql
+  CREATE TABLE `reservations` (
+    `id` INT AUTO_INCREMENT PRIMARY KEY,
+    `Name` VARCHAR(255) NOT NULL,
+    `Phone` VARCHAR(20) NOT NULL,
+    `Email` VARCHAR(255) NOT NULL,
+    `NumberOfPersons` INT NOT NULL,
+    `ReservationDate` DATE NOT NULL,
+    `ReservationTime` TIME NOT NULL,
+    `created_at` TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    UNIQUE KEY `unique_reservation` (`Phone`, `ReservationDate`)
+  ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;

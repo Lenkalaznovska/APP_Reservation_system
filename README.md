@@ -2,6 +2,8 @@
 
 Welcome to the Reservation System repository! This project is a web application designed for efficient reservation management. It allows users to easily create, update, and confirm reservations, while automatically sending confirmation emails. You can view the live version of the site [here](http://rezervacni-system.wz.cz:8080).
 
+<img width="516" height="813" alt="image" src="https://github.com/user-attachments/assets/b6c772ed-00c9-4ce7-b1b7-541bf53f9682" />
+
 ## Contents
 
 - [Description](#description)

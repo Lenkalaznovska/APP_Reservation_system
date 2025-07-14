@@ -29,9 +29,13 @@ This project uses a classic web stack without any complex frameworks, making it 
 -   **Backend:**
     -   **PHP** (utilizing the procedural `mysqli` extension for database communication)
     -   **MySQL / MariaDB**
-    -   XAMPP: Local web server containing Apache, MySQL, and PHP.
 -   **Dependencies:**
     -   **PHPMailer:** A popular PHP library for sending emails, included manually in the project.
+
+### 🧰 Development Tools
+
+- **XAMPP** – local server with Apache, MySQL, and PHP  
+- **Apache** – running the PHP application on a web server
 
 ---
 
